@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites</title>
+    <link rel="stylesheet" type="text/css" href="Page2.css">
+    <script src="https://kit.fontawesome.com/70966ca7cd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <!-------------------------
+        
+        Navigation Bar
+    
+    --------------------------->
+
+   <nav>
+    <div class="flexdisplay" id="navbar">
+        <div class="flexdisplay" id="leftnavbar"> <!-- This contains logo and titles -->
+            <div class="ring" id="navlogo"><!--Handled in css--> </div>
+            <div id="player_name">
+                <div id="pname1">Dj</div>
+                <div id="pname2">EchoSync</div>
+            </div>
+            <div id="page1">
+                 <a href="/index.html">Home</a>
+            </div>
+            <div id="page2">
+                <a href="#">Favourites</a>
+            </div>
+            <div id="page3">
+                <a href="#player">Play Bar</a>
+            </div>
+        </div>
+    
+        <div  class="flexdisplay"  id="rightnavbar">
+            <div id="searchbar">
+                <span><a href="#searchfield"><i class="fa-solid fa-magnifying-glass"></i></a></span>
+                <span><input type="search" name="searchfield" id="searchfield" placeholder="Search"></span>
+                <span><i class="fa-solid fa-microphone"></i></span>
+            </div>
+            <div id="notibell">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="ring" id="account"></div>
+        </div>
+    </div>
+   </nav>
+
+<main>
+    <!-------------------------
+        
+        Arstist Details
+    
+      --------------------------->
+      <div class="Artist-Bio-container">
+        <div class="Artist-pic"><img src="/Assests/pop1.webp" alt="kch to"></div>
+        <div class="Artist-Bio">
+            <div class="name"> Eminem</div>
+            <div class="info">-Marshall Mathers</div>
+            <div class="para">
+                <p>Eminem, born Marshall Mathers, is a legendary rapper known for his lyrical prowess, raw storytelling, and controversial yet honest narratives. Rising from a challenging background in Detroit, his music often reflects personal struggles, societal issues, and the complexities of fame. Eminem's groundbreaking album
+                 </p>
+            </div>
+            <div class="playall">
+              <div>
+                 <span><span class="playbutton"><button>Play All</button></span> <span class="follow">Follow <i class="fa-solid fa-shoe-prints"></i></span></span>
+                 <div class="records">289 Tracks | 40.7M Followers</div>
+              </div>
+            </div>
+              
+
+            
+
+        </div>
+        
+      </div>
+  <!-------------------------
+        
+        Artist's Song
+    
+      --------------------------->
+      <div class="hisalbums  ">
+        <div><h2>His Albums </h2></div>
+         <div class="tsong flexdisplay">
+            <div class="tsong-leftwing">
+                <div class="tsongart" style="background-image: url(Assests/Em1.webp);"></div>
+                <div class="tsong-info"> <!--Reusing ltsong details-->
+                    <div class="ltsongname">The Marshall Mathers LP</div>
+                    <div class="ltdate">23 May 2000</div> 
+                </div>
+            </div>
+            <div class="tsign"><i class="fa-solid fa-fire"></i></div>
+        </div>
+
+         <div class="tsong flexdisplay">
+            <div class="tsong-leftwing">
+                <div class="tsongart" style="background-image: url(Assests/Em2.jpeg);">
+
+                </div>
+                <div class="tsong-info"> <!--Reusing ltsong details-->
+                    <div class="ltsongname">The Slim Shady LP</div>
+                    <div class="ltdate">23 February 1999</div> 
+                </div>
+            </div>
+            <div class="tsign"><i class="fa-solid fa-fire"></i></div>
+        </div>
+
+         <div class="tsong flexdisplay">
+            <div class="tsong-leftwing">
+                <div class="tsongart" style="background-image: url(Assests/Em3.jpeg);">
+
+                </div>
+                <div class="tsong-info"> <!--Reusing ltsong details-->
+                    <div class="ltsongname">The Eminem Show</div>
+                    <div class="ltdate">26 May 2002</div> 
+                </div>
+            </div>
+            <div class="tsign"><i class="fa-solid fa-fire"></i></div>
+        </div>
+        
+        <div class="tsong  flexdisplay">
+            <div class="tsong-leftwing">
+                <div class="tsongart" style="background-image: url(Assests/Em4.jpeg);">
+
+                </div>
+                <div class="tsong-info"> <!--Reusing ltsong details-->
+                    <div class="ltsongname">Recovery</div>
+                    <div class="ltdate">18 June 2010</div> 
+                </div>
+            </div>
+            <div class="tsign"><i class="fa-solid fa-fire"></i></div>
+        </div>
+         
+        <div class="tsong  flexdisplay">
+            <div class="tsong-leftwing">
+                <div class="tsongart" style="background-image: url(Assests/Em5.jpg);">
+
+                </div>
+                <div class="tsong-info"> <!--Reusing ltsong details-->
+                    <div class="ltsongname">Kamikaze</div>
+                    <div class="ltdate">31 August 2018</div> 
+                </div>
+            </div>
+            <div class="tsign"><i class="fa-solid fa-fire"></i></div>
+        </div>
+        
+        <div class="tsong flexdisplay">
+            <div class="tsong-leftwing">
+                <div class="tsongart" style="background-image: url(Assests/Em6.png);">
+
+                </div>
+                <div class="tsong-info"> <!--Reusing ltsong details-->
+                    <div class="ltsongname">Revival</div>
+                    <div class="ltdate">15 December 2017</div> 
+                </div>
+            </div>
+            <div class="tsign"><i class="fa-solid fa-fire"></i></div>
+        </div>
+        
+    </div>
+
+    
+</main>
+
+<!-------------------------------------------------------------------
+        
+        Aside Section containg song Queue, Trending, Recommendations
+    
+    ----------------------------------------------------------------->
+<aside>
+    
+
+    <!---------------------------------------------------------------------------------------------------------------
+        
+        Part two of Aside containing Trending and Premium plans in block view to be other half in smaller screens
+    
+    ------------------------------------------------------------------------------------------------------------------>
+    <div class="part2aside">
+        <section class="superhits">
+            <div><h3>Super Hits</h3></div>
+            <div class="shcontainer flexdisplay" >
+                
+                  <!--Latest Release Song 1-->
+                <div class="shsong flexdisplay">
+                    <div class="lrdetails">
+                        <div class="songart lr1">
+                            <div class="play-toggle-container">
+           
+                                <input type="checkbox" class="play-toggle" id="play-pause-toggle-1" name="group">
+                                <label for="play-pause-toggle-1" class="play-pause-icon"> </label>
+                                
+                              </div>
+                        </div>
+                        <div >
+                            <div class="songname">Arjan Vailley</div>
+                            <div class="artistname">Bhupider Babbal</div>  
+                        </div>
+                    </div>
+                    <div> <!--Right side of lrsong-->
+                        <!--dropdown-->
+                        <div class="dropdown  rightalign">
+                            <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                            <div class="dropdown-content">
+                               <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                                <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                            </div>
+                            </div>
+                        <div class="timestamp">03:03</div>
+                    </div>   
+                </div>
+                
+                <!--Latest Release Song 2-->
+                <div class="shsong flexdisplay">
+                    <div class="lrdetails">
+                        <div class="songart lr2"> 
+                         <div class="play-toggle-container">
+           
+                            <input type="checkbox" class="play-toggle" id="play-pause-toggle-2" name="group"">
+                            <label for="play-pause-toggle-2" class="play-pause-icon"> </label>
+                            
+                          </div>
+                        </div>
+                        <div >
+                            <div class="songname">Džanum</div>
+                            <div class="artistname">Teya Dora</div>  
+                        </div>
+                    </div>
+                    <div> <!--Right side of lrsong-->
+                        <!--dropdown-->
+                        <div class="dropdown rightalign">
+                            <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                            <div class="dropdown-content">
+                               <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                                <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                            </div>
+                            </div>
+                        <div class="timestamp">04:35</div>
+                    </div>   
+                </div>      
+                
+                  <!--Latest Release Song 3-->
+                  <div class="shsong flexdisplay">
+                    <div class="lrdetails">
+                        <div class="songart lr3">  <div class="play-toggle-container">
+           
+                            <input type="checkbox" class="play-toggle" id="play-pause-toggle-3" name="group">
+                            <label for="play-pause-toggle-3" class="play-pause-icon"> </label>
+                            
+                          </div></div>
+                        <div >
+                            <div class="songname">Jamal Kudu</div>
+                            <div class="artistname">Harshwardhan</div>  
+                        </div>
+                    </div>
+                    <div>
+                        <!--dropdown-->
+                        <div class="dropdown  rightalign">
+                            <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                            <div class="dropdown-content">
+                               <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                                <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                            </div>
+                            </div>
+                        <div class="timestamp">02:27</div>
+                    </div>   
+                </div>  
+    
+                  <!--Latest Release Song 4-->
+                  <div class="shsong flexdisplay">
+                    <div class="lrdetails">
+                        <div class="songart lr4">
+                          <div class="play-toggle-container">
+           
+                            <input type="checkbox" class="play-toggle" id="play-pause-toggle-4" name="group">
+                            <label for="play-pause-toggle-4" class="play-pause-icon"> </label>
+                            
+                          </div>
+                        </div>
+                        <div >
+                            <div class="songname">Lover</div>
+                            <div class="artistname">Taylor Swift</div>  
+                        </div>
+                    </div>
+                    <div>
+                        <!--dropdown-->
+                        <div class="dropdown  rightalign">
+                            <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                            <div class="dropdown-content">
+                               <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                                <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                                <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                            </div>
+                            </div>
+                        <div class="timestamp">03:58</div>
+                    </div>   
+                </div>
+            </div>
+        </section>
+    
+
+      
+    <!-------------------------
+        
+        Premium Plans
+    
+        --------------------------->
+
+        <div class="premium">
+            <div class="plan-card ">
+                <div class="tperiod">3 months for $19</div>
+                <div class="otpa"> <text>One-time plans here</text></div>
+                <div class="profile">Premium Plus+</div>
+                <div class="hr"></div>
+                <div class="offers">
+                    <ul >
+                        <li>Ad-free music</li>
+                        <li>Group Session</li>
+                        <li>Download 10k songs/device on 5 devices</li>
+                    </ul>
+                </div>
+                <div class="buynow">
+                    <button type="button">Buy Now</button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</aside>
+<!-------------------------
+        
+        Play Bar
+    
+--------------------------->
+<footer id="player" class="flexdisplay">
+    <!-------------------------------------
+        Left Side of Play Bar - Now Playng
+        ------------------------------------->
+    <div class="now-playing">
+        <div class="songart" style="background-image: url(Assests/moye.jpeg);"></div>
+        <div class="tsong-info"> <!--Reusing ltsong details-->
+            <div class="ltsongname">Džanum</div>
+            <div class="ltdate">Teya Dora</div> 
+        </div>
+    
+    
+    <div id="stopsign" >    
+        <div><i class="fa-regular fa-heart"></i></div>
+        <div><a href="#end"><i class="fa-regular fa-circle-stop"></i></a></div>
+    </div>
+    </div>
+   <!-------------------------------------
+        Middle Side of Play Bar - Seekbar
+        ------------------------------------->
+    
+    <div>
+    <!-----Upper Seek Bar - Icons------>
+        <div class="Seekbar-icons">
+            <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <i class="fa-solid fa-play"></i>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-repeat"></i>    
+        </div>
+         <!-----Lower Seek Bar ------>
+        <div class="Seekbar">
+            <span class="before-Seekbar">0:00</span>
+            <input type="range" min="0" max="100" value="50" class="custom-range">
+            <span class="after-Seekbar">4:12</span>
+        </div>
+    </div>
+
+   <!-------------------------------------
+        Right Side of Play Bar - Controls
+        ------------------------------------->
+    <div class="extra-control">
+      <span>  <i class="fa-regular fa-bookmark"></i>
+        <a href="#searchfield"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <i class="fa-solid fa-volume-high"></i> </span>
+       <span> <div class="volbar"><input type="range" min="0" max="100" value="50" class="custom-range"></div></span>
+       <span> <a href="#"><i class="fa-solid fa-house"></i></a></span>
+       <span>&nbsp;&nbsp;</span> <!--Using this to align away from scroll bar -->
+    </div>
+</footer>
+<div id="end"></div> <!--Used to for disabling player bar --> 
+</body>
+</html>

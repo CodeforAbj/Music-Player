@@ -1,0 +1,942 @@
+:root{
+    --Accentcolor1: beige;
+    --Accentcolor2: rgb(18, 155, 18);
+    --bgAccentcolor2: rgba(18, 155, 18, 0.24);
+    --dropdowncolor: rgba(15, 15, 15, 0.685);
+    
+}
+body{
+    background-image: url('Assests/mainbg.jpg');
+    background-size: cover;
+    background-repeat:repeat-y;
+    color: var(--Accentcolor1);
+    font-family:'Courier New', Courier, monospace;
+    caret-color: transparent;
+     scrollbar-width: none;/* Hide the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
+    
+}
+body::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in Chrome/Safari */
+  }
+section{
+    margin-bottom: 6%;
+}
+ul {
+  list-style: none;
+  padding-left: 12px;
+}
+
+ul li:before {
+  content: '✓  ';
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* -----------------------------------
+
+        Reusable classes 
+
+--------------------------------------  */
+
+.ring{
+    margin: 1vw;
+    height: 3.5vw;
+    width: 3.5vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:3px solid var(--Accentcolor1);
+    border-radius: 50%;
+}
+.flexdisplay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.rightalign{
+    position: relative;
+    left:20px;
+}
+.smallf{
+    font-size: 0.9rem;
+}
+.rot45{
+    transform: rotate(-15deg);
+}
+
+/* ----------------------
+    
+    Navigation bar
+    
+ ------------------------ */
+
+ nav{
+    position: sticky;
+    top:0;
+    z-index: 9000;
+    background-image: url('Assests/mainbg.jpg');
+    background-size: cover;
+
+}
+#navbar{
+    border-bottom: 3px solid var(--Accentcolor1);
+}
+    /* 
+        Left side of navigation bar
+                                        */
+    
+    #navlogo{
+        background-image: url('Assests/logo.png');
+    }
+    #player_name{
+        margin: 1vw;
+        margin-top: 2vw;
+    }
+    #pname1{
+        font-weight: bolder;
+    }
+    #pname2{
+        font-size: 1.1rem;
+        font-weight: bolder;
+    }
+    #page1,#page2,#page3{
+        font-size: 1.1rem;
+        margin-left:3vw;  
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    /* 
+        Right side of navigation bar
+                                        */
+
+    #account{
+        background-image: url('Assests/pro\ dp\ 2.jpg');
+    }
+    #searchbar{
+        background-color: rgb(109, 109, 109);
+        border: 0;
+        border-radius: 15px;
+       
+        color :var(--Accentcolor1);
+        padding: 8px;
+        margin: 2vw;
+    }
+    #searchbar input{
+        background-color: transparent;
+        width: 20vw;
+        border: 0;
+        color: var(--Accentcolor1);
+    }
+    #notibell{
+        font-size: 1.8rem;
+    }
+
+    /* -------------------------------
+    
+        Main and Aside formatting 
+        
+    -----------------------------------*/
+   
+    main{
+            height: fit-content;
+            position: relative;
+            padding-top: 20px;
+            display: inline-block;
+            margin-left:2vw;
+            margin-right: 1%;
+            margin-top: 7%;
+            padding :2%;
+            width:60%;
+            /* border: 2px dotted red; */
+            overflow-x: visible;
+
+   }
+   aside{
+            position: absolute;
+            display: inline-block;
+            margin-left:0.5vw;
+            margin-right: 2vw;
+            margin-top: 7%;
+            padding:1%;
+            width:21%;
+            /* border: 2px dotted blue; */
+   }
+   @media screen and (max-width:920px) {
+    main{
+        display:block;
+        width: 80%;
+        margin-left: 10%;
+    }
+    aside{
+        display:flex;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .part1aside{
+        display: inline-block;
+        max-width: 50%;
+    }   
+    .part2aside{
+        position: relative;
+        left: 20%;
+        display: inline-block;
+        max-width: 40%;
+    } 
+   }
+  
+ /*  ------------------------
+ 
+        Carousel 
+        
+    --------------------------  */
+
+   .carousel{
+    position: relative;
+    top: 10%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap:nowrap;
+    padding-top: 20px;
+    
+
+}
+.c_element{
+    height: 40vh;
+    width: 60vh;
+    /* border: 3px solid var(--Accentcolor1); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 10px 0 20px  rgb(18, 155, 18, 0.8) , -10px 0 20px rgba(255, 255, 0, 0.521) ;
+    
+
+}
+.c1{
+    position: relative;
+    left: 3vw;
+    background-image: url(Assests/legendsneverdie.webp);
+    
+}
+.c2{
+    position: relative;
+    z-index: 1;
+    background-image: url(Assests/nether.jpg);
+    scale: 1.1;
+}
+.c3{
+    position: relative;
+    right: 3vw;
+    background-image: url(Assests/tswift.jpeg);
+    
+}
+.c1:hover{
+    z-index: 3;
+    scale: 1.3;
+}
+.c2:hover{
+    z-index: 3;
+    scale: 1.3;
+    transition: all 0.4s ease-in-out;
+}
+.c3:hover{
+    z-index: 3;
+    scale: 1.3 ;
+}
+   
+   
+ /* ---------------------------- 
+          
+       Making of dropdown here 
+ 
+    ----------------------------*/
+
+    .dropdown{
+    display: inline-block;
+}
+.dropdown .dropdown_trigger{
+    font-size: 1.1rem;
+    background-color: none;
+    color: var(--Accentcolor2);
+    cursor: pointer;
+}
+.dropdown .dropdown-cell{
+    display: block;
+    color: var(--Accentcolor2);
+    border-bottom: 1px solid var(--dropdowncolor);
+    padding: 2px;
+
+}
+.dropdown .dropdown-content{
+    display: none;
+    background-color: var(--dropdowncolor);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px var(--Accentcolor2);
+    z-index: 100;
+}
+.leftwing{
+    position: absolute;
+    left:0;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    z-index: 100;
+}
+.dropdown:hover .dropdown_trigger{
+    background-color: var(--dropdowncolor);
+}
+.dropdown .dropdown-content .dropdown-cell:hover{
+    background-color: var(--Accentcolor1);
+}
+
+
+/* -----------------------------
+
+        SuperHits section       
+ 
+  ------------------------------ */
+.shcontainer{
+    flex-wrap: wrap;
+}
+.shsong{
+    width: 40%;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+.songart.lr1{
+    background-image: url(Assests/lr1.jpeg);
+}
+.songart.lr2{
+    background-image: url(Assests/moye.jpeg);
+}
+.songart.lr3{
+    background-image: url(Assests/lr3.jpeg);
+}
+.songart.lr4{
+    background-image: url(Assests/tswift.jpeg);
+}
+/* -----------------------
+
+        Play button code 
+        
+    ------------------------*/
+.play-toggle-container{
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+.songart:hover .play-toggle-container{
+    visibility: visible;
+}
+.play-pause-icon{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('Assests/play.png');
+    background-size:30%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.play-toggle{
+    display: none;
+}
+  .play-toggle:checked + .play-pause-icon{
+    background-image: url('Assests/pause.png');
+  }
+.timestamp{
+    font-size: 0.8rem;
+    color:gray
+}
+.lrdetails
+{
+    display: flex;
+    align-items: center;
+}
+
+/* ------------------------
+
+
+        Popular Artist Section
+        
+    --------------------------- */
+.p-artistname{
+    text-align: center;
+
+}
+@media screen and (max-width:620px){
+.p-artistname{
+    font-size: xx-small;
+
+}
+}
+.popring{
+    /* Only Size needs to be adjusted here rest is defined in ring class */
+    height: 5.5vw;
+    width: 5.5vw;
+}
+.pr1{
+    background-image: url(Assests/pop1.webp);
+}
+.pr2{
+    background-image: url(Assests/pop2.webp);
+}
+.pr3{
+    background-image: url(Assests/pop3.webp);
+}
+.pr4{
+    background-image: url(Assests/pop4.jpeg);
+}
+.pr5{
+    background-image: url(Assests/pop5.jpeg);
+}
+.pr6{
+    background-image: url(Assests/pop6.jpeg);
+}
+.pops{
+    border-radius: 50%;
+}
+
+.popring:hover .pops{
+    visibility: visible;
+}
+
+
+
+/*-------------------------
+ 
+        
+        Genre-container
+
+        
+------------------------------ */
+.Genre-container{
+    margin-top: 5%;
+    padding-top: 2%;
+    margin-bottom: 5%;
+    padding-bottom: 2%;
+    background-color: var(--bgAccentcolor2);
+}
+.stations-icon{
+    content: ''; 
+    display: inline-block;
+    width: 100px; /* Set the width */
+    height: 100px; /* Set the height */
+    background-size: cover; /* Adjust the background size */
+    margin: 10px;
+    background-image:url(Assests/stack.png) ;
+}
+
+.gr{
+    height: 5vw;
+    width: 5vw;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;
+    font-size: x-small;  
+    /* border: none; */
+    transition: all 0.3s ease-in;
+}
+.gr:hover{
+    transform: rotate(360deg);
+}
+
+
+
+.gr div{
+    z-index: 1;
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;
+    font-size: small;  
+    background-color: rgba(0, 0, 0, 0.253);
+    font-weight: bolder;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    transition: all 0s ease; 
+    
+}
+
+@media screen and (max-width:720px){
+    .gr div{
+        visibility: hidden;
+        font-size: 0.2rem;  
+    }
+}
+@media screen and (max-width:1010px){
+    .gr div{
+        font-size: 0.6rem;  
+    }
+}
+.gr1{
+    background-image: url(Assests/g1.jpeg);
+    background-position: center;
+}
+.gr2{
+    background-image: url(Assests/g2.jpeg);
+    background-position: center;
+}
+.gr3{
+    background-image: url(Assests/g3.jpeg);
+    background-position: center;
+}
+.gr4{
+    background-image: url(Assests/g4.jpeg);
+    background-position: center;
+}
+.gr5{
+    background-image: url(Assests/g5.jpeg);
+    background-position: center;
+}
+.gr6{
+    background-image: url(Assests/g6.jpeg);
+    background-position: center;
+}
+
+
+
+/* ------------------------------     
+      
+        Moods Display            
+        
+    -------------------------------  */
+.moodbound{
+    height: 25vh;
+    overflow: hidden;
+    flex-grow: 1;
+    margin: 1%;
+
+}
+.moodbox{
+    /* for containing animation */
+    display: flex;
+    justify-content: space-around;
+    min-height: 25vh;
+    background-position: center;
+    
+    transition: all 0.5s ease-in;
+    
+}
+.moodbound:hover .moodbox{
+    transform: scale(1.2);
+}
+
+.moodname{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(0, 0, 0, 0.582);
+font-weight: bolder;
+width: 100%;
+}
+.mdb1{
+    background-image: url(Assests/mood1.jpeg);
+    flex-grow: 1;
+}
+.mdb2{
+    background-image: url(Assests/mood2.jpeg);
+    flex-grow: 1;
+}
+.mdb3{
+    background-image: url(Assests/mood3.jpeg);
+    flex-grow: 1;
+}
+
+
+
+/* ----------------------------------
+
+    Latest Song Section
+    
+    ----------------------------------*/
+.ltcontainer{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    justify-content: space-evenly;
+}
+.ltsong{
+    height: 8vw;
+    width: 8vw;
+    background-size: cover;
+    margin-bottom: 2vh;
+}
+.ltdate{
+    font-size: x-small;
+    color:grey;
+}
+
+
+
+
+/*  ------------------------------------
+      
+       Part-1 Aside Playlist container  
+
+    -------------------------------------      */
+
+   #qcontainer{
+    /* border: 1px dotted white; */
+    display: flex;
+    flex-direction: column;
+    max-height: 145dvh;
+    overflow-y: scroll; 
+    scrollbar-width: none;/* Hide the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
+  }
+  
+  .qcontainer::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in Chrome/Safari */
+  }
+
+   
+   .qsongcontainer{
+    margin-bottom: 20px;
+     
+   }
+   #qcontainer ol {
+    /* list-style-type: decimal-leading-zero; */
+    list-style: none; /* removes the current list numbers */
+    counter-reset: alist;
+   }
+   
+   #qcontainer li { 
+    position: relative; /* make relative, so we can position the number absolutely */
+  }
+  #qcontainer li:before {
+    counter-increment: alist; /* increment the counter by 1 */
+    content: counter(alist, decimal-leading-zero); /* output the counter, with a dot at the end */
+    position: absolute; /* the rest is positioning and styling */
+    top: 35%;
+    right: 100%;
+    margin-right: 5px;
+  }
+   .qsong{
+        display: flex;
+        align-items: center;
+        margin: 5px;
+   }
+   .songart{
+    content: ''; 
+    display: inline-block;
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    background-size: cover; /* Adjust the background size */
+    margin-right: 15px;
+   }
+   
+    .songart.m1{
+        background-image: url('Assests/Music_Disc_Chirp.webp');
+    }
+    .songart.m2{
+        background-image: url('Assests/Music_Disc_Pigstep.webp');
+    }
+    .songart.m3{
+        background-image: url('Assests/Music_Disc_5.webp');
+    }
+    .songart.m4{
+        background-image: url('Assests/Music_Disc_11.webp');
+    }
+    .songart.m5 {
+        background-image: url('Assests/Music_Disc_13.webp');
+    }
+    .songart.m6 {
+        background-image: url('Assests/Music_Disc_Cat.webp');
+    }
+
+    .songart.m7 {
+        background-image: url('Assests/Music_Disc_Blocks.webp');
+    }
+
+    .songart.m8 {
+        background-image: url('Assests/Music_Disc_Far.webp');
+    }
+
+    .songart.m9 {
+        background-image: url('Assests/Music_Disc_Mall.webp');
+    }
+
+    .songart.m10 {
+        background-image: url('Assests/Music_Disc_Mellohi.webp');
+    }
+
+    .songart.m11 {
+        background-image: url('Assests/Music_Disc_Stal.webp');
+    }
+
+    .songart.m12 {
+        background-image: url('Assests/Music_Disc_Strad.webp');
+    }
+
+    .songart.m13 {
+        background-image: url('Assests/Music_Disc_Ward.webp');
+    }
+
+    .songart.m14 {
+        background-image: url('Assests/Music_Disc_Wait.webp');
+    }
+
+    .songart.m15 {
+        background-image: url('Assests/Music_Disc_Otherside.webp');
+    }
+
+    .songart.m16 {
+        background-image: url('Assests/Music_Disc_Relic.webp');
+    }
+
+    
+/*  -----------------------------------------------
+      
+        Part-2 Aside - Trending, Premium plans  
+
+    -------------------------------------------------    */
+   
+  /*  ------------------------------------
+      
+             Trending Section  
+
+    -------------------------------------      */
+    .trending{
+        margin-top: 2vh;
+        /* border: 1px dotted green; */
+        height: 50dvh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll; 
+        scrollbar-width: none;/* Hide the scrollbar in Firefox */
+        -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
+      }
+      
+      .trending::-webkit-scrollbar {
+        display: none; /* Hide the scrollbar in Chrome/Safari */
+      }
+
+      .tsong{
+        padding: 0.2vw;
+        padding-left: 0.4vw;
+        padding-right: 0.6vw;
+        margin-bottom: 1vw;
+        background-color: var(--bgAccentcolor2);
+      }
+      .tsong-leftwing{
+        display: flex;
+        align-items: center;
+      }
+      .tsongart{
+        height: 6vw;
+        width: 6vw;
+        margin-right: 0.5vw;
+        background-size: cover;
+        background-position: center;
+      }
+      .profile{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: var(--Accentcolor2);
+      }
+      .hr{
+        width: 100%;
+        border-top:2px solid var(--Accentcolor2) ;
+      }
+      .offers{
+        color: var(--Accentcolor2);
+      }
+      .buynow button{
+            width: 90%;
+            padding: 5px 0px;
+            font-size: large;
+            font-weight: bolder;
+            border-radius: 18px;
+            color: var(--Accentcolor2);
+            background-color: black;
+            
+      }
+   
+/*  ------------------------------------
+      
+        Premium offers
+
+    -------------------------------------      */
+   .premium{ 
+        margin-top: 2vh;
+        display: flex;
+        overflow-x: hidden; 
+        /* border: 1px dotted yellow; */
+        height:max-content;
+        background-color: var(--Accentcolor1);
+        
+       }
+      
+    
+      .plan-card{
+        margin: 0.6vw;
+        padding: 1vw;
+        background-color: var(--bgAccentcolor2)
+      }
+      .tperiod{
+        padding: 0.4rem;
+        width: fit-content;
+        border-radius: 10px;
+        background-color: var(--Accentcolor2);
+        font-weight: bolder;
+        margin-bottom: 0.5vw;
+      }
+      .otpa{
+        
+        padding: 0.2rem;
+        width: fit-content;
+        border-radius: 6px;
+        background-color: transparent;
+        color: var(--Accentcolor2);
+        border:1px solid var(--Accentcolor2);
+        font-weight: bolder;
+        margin-bottom: 0.5vw;
+        text-wrap: nowrap;
+        
+        
+      
+      }
+
+  /*-------------------------------------
+        Left Side of Play Bar - Song info
+        ------------------------------------*/
+    #player{
+        border-top: 4px solid var(--Accentcolor1);
+        display: none; 
+        position: absolute;
+        height: 8vh;
+        width: 100%;     
+        background-color:  rgb(13, 46, 13);
+        z-index: 999;
+        
+       
+    }
+    #player:target{
+        display: flex;
+        
+        justify-content: space-between;
+        position: fixed;
+        bottom:0;    
+    }
+    .now-playing{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #stopsign{
+        margin-left: 1vw;
+    }
+
+/*-------------------------------------
+    Middle of Play Bar - Seekbar
+ ------------------------------------*/
+.Seekbar-icons{
+    display: flex;
+    justify-content: center;
+}
+.Seekbar-icons i{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+
+.Seekbar {
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    position: relative;
+}
+
+.before-content, .after-content {
+    position: absolute;
+}
+
+.before-content {
+    left: 0;
+}
+
+.after-content {
+    right: 0;
+}
+ /*  ------------------------------------
+      
+        Seekbar customisation
+
+    -------------------------------------      */
+input[type="range"].custom-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Color on the left of thumb */
+input[type="range"].custom-range::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #129B12 0%, #129B12 50%, #555 50%, #555 100%);
+  border-radius: 5px;
+}
+
+/* Color on the right of thumb */
+input[type="range"].custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for Firefox */
+input[type="range"].custom-range::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for IE */
+input[type="range"].custom-range::-ms-thumb {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+  /* -------------------------------------
+        Right Side of Play Bar - Controls
+        ------------------------------------ */
+.extra-control{
+    display: flex;
+
+}
+
+.extra-control i{
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+}
+.volbar{
+    width: 5vw;
+    margin-right: 1vw;
+}

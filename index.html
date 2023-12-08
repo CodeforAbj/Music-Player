@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoSync Player</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/70966ca7cd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <!-------------------------
+        
+        Navigation Bar
+    
+    --------------------------->
+
+   <nav>
+    <div class="flexdisplay" id="navbar">
+        <div class="flexdisplay" id="leftnavbar"> <!-- This contains logo and titles -->
+            <div class="ring" id="navlogo"><!--Handled in css--> </div>
+            <div id="player_name">
+                <div id="pname1">Dj</div>
+                <div id="pname2">EchoSync</div>
+            </div>
+            <div id="page1">
+                 <a href="#">Home</a>
+            </div>
+            <div id="page2">
+                <a href="/Page2.html">Favourites</a>
+            </div>
+            <div id="page3">
+                <a href="#player">Play Bar</a>
+            </div>
+        </div>
+    
+        <div  class="flexdisplay"  id="rightnavbar">
+            <div id="searchbar">
+                <span><a href="#searchfield"><i class="fa-solid fa-magnifying-glass"></i></a></span>
+                <span><input type="search" name="searchfield" id="searchfield" placeholder="Search"></span>
+                <span><i class="fa-solid fa-microphone"></i></span>
+            </div>
+            <div id="notibell">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="ring" id="account"></div>
+        </div>
+    </div>
+   </nav>
+
+<main>
+
+    <!-------------------------
+        
+        Carousel section
+    
+    --------------------------->
+
+    <section class="carousel">
+        <!--Transition is z index and scale and must have shadow-->
+        <div class="c_element c1"></div>
+        <div class="c_element c2"></div>
+        <div class="c_element c3"></div>
+    </section>
+
+    <!-------------------------
+        
+        SuperHits section
+    
+    --------------------------->
+    <section class="superhits">
+        <div><h3>Super Hits</h3></div>
+        <div class="shcontainer flexdisplay" >
+            
+              <!--Super HIt Song 1-->
+            <div class="shsong flexdisplay">
+                <div class="lrdetails">
+                    <div class="songart lr1">
+                        <div class="play-toggle-container">
+       
+                            <input type="checkbox" class="play-toggle" id="play-pause-toggle-1" name="group">
+                            <label for="play-pause-toggle-1" class="play-pause-icon"> </label>
+                            
+                          </div>
+                    </div>
+                    <div >
+                        <div class="songname">Arjan Vailley</div>
+                        <div class="artistname">Bhupider Babbal</div>  
+                    </div>
+                </div>
+                <div> <!--Right side of lrsong-->
+                    <!--dropdown-->
+                    <div class="dropdown  rightalign">
+                        <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                        <div class="dropdown-content">
+                           <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                            <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                        </div>
+                        </div>
+                    <div class="timestamp">03:03</div>
+                </div>   
+            </div>
+            
+            <!--Super HIt Song 2-->
+            <div class="shsong flexdisplay">
+                <div class="lrdetails">
+                    <div class="songart lr2"> 
+                     <div class="play-toggle-container">
+       
+                        <input type="checkbox" class="play-toggle" id="play-pause-toggle-2" name="group"">
+                        <label for="play-pause-toggle-2" class="play-pause-icon"> </label>
+                        
+                      </div>
+                    </div>
+                    <div >
+                        <div class="songname">Džanum</div>
+                        <div class="artistname">Teya Dora</div>  
+                    </div>
+                </div>
+                <div> <!--Right side of lrsong-->
+                    <!--dropdown-->
+                    <div class="dropdown rightalign">
+                        <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                        <div class="dropdown-content">
+                           <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                            <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                        </div>
+                        </div>
+                    <div class="timestamp">04:35</div>
+                </div>   
+            </div>      
+            
+              <!--Super HIt Song 3-->
+              <div class="shsong flexdisplay">
+                <div class="lrdetails">
+                    <div class="songart lr3">  <div class="play-toggle-container">
+       
+                        <input type="checkbox" class="play-toggle" id="play-pause-toggle-3" name="group">
+                        <label for="play-pause-toggle-3" class="play-pause-icon"> </label>
+                        
+                      </div></div>
+                    <div >
+                        <div class="songname">Jamal Kudu</div>
+                        <div class="artistname">Harshwardhan</div>  
+                    </div>
+                </div>
+                <div>
+                    <!--dropdown-->
+                    <div class="dropdown  rightalign">
+                        <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                        <div class="dropdown-content">
+                           <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                            <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                        </div>
+                        </div>
+                    <div class="timestamp">02:27</div>
+                </div>   
+            </div>  
+
+              <!--Super HIt Song 4-->
+              <div class="shsong flexdisplay">
+                <div class="lrdetails">
+                    <div class="songart lr4">
+                      <div class="play-toggle-container">
+       
+                        <input type="checkbox" class="play-toggle" id="play-pause-toggle-4" name="group">
+                        <label for="play-pause-toggle-4" class="play-pause-icon"> </label>
+                        
+                      </div>
+                    </div>
+                    <div >
+                        <div class="songname">Lover</div>
+                        <div class="artistname">Taylor Swift</div>  
+                    </div>
+                </div>
+                <div>
+                    <!--dropdown-->
+                    <div class="dropdown  rightalign">
+                        <span class="dropdown_trigger"> <i class="fa-solid fa-ellipsis"></i></span>
+                        <div class="dropdown-content">
+                           <div class="dropdown-cell smallf"><i class="fa-solid fa-play"></i> Play Now</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-plus"></i> Add To Queue</div>
+                            <div class="dropdown-cell smallf"> <i class="fa-solid fa-list"></i> Add To Favourites</div>
+                            <div class="dropdown-cell smallf"><i class="fa-solid fa-info"></i> Get Info</div> 
+                        </div>
+                        </div>
+                    <div class="timestamp">03:58</div>
+                </div>   
+            </div>
+        </div>
+    </section>
+    
+    <!-------------------------
+        
+        Popular Artist section
+    
+    --------------------------->
+    <section class="PopularArtist">
+        <div><h3>Popular Artists</h3></div>
+        <div class="pacontainer flexdisplay">
+            <div class="popartist ">
+              <div class="ring popring pr1">
+                <div class="pops play-toggle-container">
+                    <a href="/Page2.html" target="_blank">
+                        <div class="play-pause-icon">
+                        </div>
+                    </a>
+                </div>
+              </div>
+              <div class="p-artistname">Eminem</div>
+            </div>
+            <div class="popartist ">
+              <div class="ring popring pr2">
+                <div class="pops play-toggle-container">
+                  <a href="/Page2.html" target="_blank"> 
+                    <div class="play-pause-icon">
+                    </div>
+                  </a> 
+                </div>
+              </div>
+              <div class="p-artistname">Adam Levine</div>
+            </div>
+              <div class="popartist">
+                <div class="ring popring pr3">
+                    <div class="pops play-toggle-container">
+                     <a href="/Page2.html" target="_blank">
+                        <div class="play-pause-icon">
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="p-artistname">Tupac</div>
+              </div>
+            <div class="popartist ">
+                <div class="ring popring pr4">
+                    <div class="pops play-toggle-container">
+                      <a href="/Page2.html" target="_blank">  
+                        <div class="play-pause-icon">
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                <div class="p-artistname">Passenger</div>
+            </div>
+            <div class="popartist">
+                <div class="ring popring pr5">
+                    <div class="pops play-toggle-container">
+                      <a href="/Page2.html" target="_blank">   
+                        <div class="play-pause-icon">
+                        </div>
+                      </a>  
+                    </div>
+                </div>
+                <div class="p-artistname">Honey Singh</div>
+            </div>
+            <div class="popartist ">
+                <div class="ring popring pr6">
+                    <div class="pops play-toggle-container">
+                      <a href="/Page2.html" target="_blank">  
+                        <div class="play-pause-icon">
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                <div class="p-artistname">Mohit Chauhan</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-------------------------
+        
+        Genre Bar
+    
+    --------------------------->
+    <section class="Genre ">
+        <div class="Genre-container flexdisplay">
+            <div class="stations-icon "></div>
+            <div class="ring gr gr1"><div>Rock</div></div>
+            <div class="ring gr gr2"><div>Retro</div></div>
+            <div class="ring gr gr3"><div>Chill</div></div>
+            <div class="ring gr gr4"><div>Workout</div></div>
+            <div class="ring gr gr5"><div>Pop</div></div>
+            <div class="ring gr gr6"><div>Jazz</div></div>
+        </div>
+    </section>
+    
+    <!-------------------------
+        
+        Moods Bar
+    
+    --------------------------->
+
+    <section class="moods">
+        <!--Animated Big Tiles-->
+        <div class="mcontainer flexdisplay">
+            <div class="moodbound"><div class="moodbox mdb1"><div class="moodname">House Party</div></div></div>
+            <div class="moodbound"><div class="moodbox mdb2"><div class="moodname">Conecentration</div></div></div>
+            <div class="moodbound"><div class="moodbox mdb3"><div class="moodname">Road Trip</div></div></div>
+        </div>
+    </section>
+   
+   <!-------------------------
+        
+        Latest Song Section
+    
+    --------------------------->
+    <section class="Latest">
+     <!-------------------------
+        English Songs
+       --------------------------->
+        <div><h3>Latest English</h3></div>
+        <div class="ltcontainer flexdisplay">
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/le1.jpg);"></div>
+                <div class="ltsongname">Sure Thing</div>
+                <div class="ltdate"> 12 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/le2.jpg);"></div>
+                <div class="ltsongname">Baila Sola</div>
+                <div class="ltdate"> 24 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/le3.jpg);"></div>
+                <div class="ltsongname">La Belle</div>
+                <div class="ltdate">09 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/le4.jpg);"></div>
+                <div class="ltsongname">Anti Hero</div>
+                <div class="ltdate"> 18 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/le5.jpg);"></div>
+                <div class="ltsongname">Everything</div>
+                <div class="ltdate">26 Dec 2023</div>
+            </div>
+        </div>
+
+        <!-------------------------
+            Hindi Songs
+        --------------------------->    
+        <div><h3>Latest Hindi</h3></div>
+        <div class="ltcontainer flexdisplay">
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/lh1.jpg);"></div>
+                <div class="ltsongname">Chaleya</div>
+                <div class="ltdate"> 22 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/lh2.jpg);"></div>
+                <div class="ltsongname">Heeriye</div>
+                <div class="ltdate"> 03 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/lh3.jpg);"></div>
+                <div class="ltsongname">Tere Vaste</div>
+                <div class="ltdate"> 17 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/lh4.jpg);"></div>
+                <div class="ltsongname">Chahiye</div>
+                <div class="ltdate"> 14 Dec 2023</div>
+            </div>
+            <div>
+                <div class="ltsong" style="background-image: url(Assests/lh5.jpg);"></div>
+                <div class="ltsongname">Apna banale</div>
+                <div class="ltdate"> 29 Dec 2023</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-------------------------------------------------------------------
+        
+        Aside Section containg song Queue, Trending, Recommendations
+    
+    ----------------------------------------------------------------->
+<aside>
+    <div class="part1aside">
+    <!-------------------------
+        
+        Part one that is for containing the Playing Queue and act as block one in smaller Screens
+    
+    --------------------------->
+    <header class="flexdisplay" >
+     <!-- Header of aside Queue -->
+        <h2>Queue</h2>
+        <div class="dropdown">
+        <span class="dropdown_trigger">Options <i class="fa-solid fa-caret-down"></i></span>
+        <div class="dropdown-content">
+           <div class="dropdown-cell"> Play Next</div>
+            <div class="dropdown-cell"> Shuffle</div>
+            <div class="dropdown-cell"> Repeat</div>
+            <div class="dropdown-cell"> Play/Pause</div> 
+        </div>
+        </div>
+    </header>
+    <!-------------------------
+        
+        Songs List
+    
+    --------------------------->
+    <div id="qcontainer">
+        <ol> <!--Here is the List of songs -->
+          <li> <!--Chirp-->
+          <div class="qsongcontainer flexdisplay ">
+            <div class="qsong"> <!--To make art img adjacent to details  -->
+                <div class="songart m1"></div>
+                <div class="qsdetails">
+                    <div class="songname">Chirp</div>
+                    <div class="artistname">C418</div>  
+                </div> <!--use before class twice-->
+            </div>
+            <div class="qsheart"> <i class="fa-regular fa-heart"></i></div>
+          </div>
+          </li>
+
+          <li> <!--Pigstep-->
+          <div class="qsongcontainer flexdisplay ">
+            <div class="qsong"> <!--To make art img adjacent to details  -->
+                <div class="songart m2"></div>
+                <div class="qsdetails">
+                    <div class="songname">Pigstep</div>
+                    <div class="artistname">Lena Raine</div>  
+                </div> <!--use before class twice-->
+            </div>
+            <div class="qsheart"> <i class="fa-regular fa-heart"></i></div>
+          </div>
+          </li>
+
+           <li> <!--Five-->
+          <div class="qsongcontainer flexdisplay ">
+            <div class="qsong"> <!--To make art img adjacent to details  -->
+                <div class="songart m3"></div>
+                <div class="qsdetails">
+                    <div class="songname">Five</div>
+                    <div class="artistname">Samuel Åberg </div>  
+                </div> <!--use before class twice-->
+            </div>
+            <div class="qsheart"> <i class="fa-regular fa-heart"></i></div>
+          </div>
+          </li>
+
+           <li> <!--11-->
+          <div class="qsongcontainer flexdisplay ">
+            <div class="qsong"> <!--To make art img adjacent to details  -->
+                <div class="songart m4"></div>
+                <div class="qsdetails">
+                    <div class="songname">11</div>
+                    <div class="artistname">C418 </div>  
+                </div> <!--use before class twice-->
+            </div>
+            <div class="qsheart"> <i class="fa-regular fa-heart"></i></div>
+          </div>
+          </li>
+
+                    <!-- 13 - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m5"></div>
+                <div class="qsdetails">
+                    <div class="songname">13</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Cat - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m6"></div>
+                <div class="qsdetails">
+                    <div class="songname">Cat</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Blocks - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m7"></div>
+                <div class="qsdetails">
+                    <div class="songname">Blocks</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Far - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m8"></div>
+                <div class="qsdetails">
+                    <div class="songname">Far</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Relic - Aaron Cherof -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m16"></div>
+                <div class="qsdetails">
+                    <div class="songname">Relic</div>
+                    <div class="artistname">Aaron Cherof</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+            
+            <!-- Mall - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m9"></div>
+                <div class="qsdetails">
+                    <div class="songname">Mall</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Mellohi - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m10"></div>
+                <div class="qsdetails">
+                    <div class="songname">Mellohi</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Stal - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m11"></div>
+                <div class="qsdetails">
+                    <div class="songname">Stal</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Strad - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m12"></div>
+                <div class="qsdetails">
+                    <div class="songname">Strad</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Otherside - Lena Raine -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m15"></div>
+                <div class="qsdetails">
+                    <div class="songname">Otherside</div>
+                    <div class="artistname">Lena Raine</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Ward - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m13"></div>
+                <div class="qsdetails">
+                    <div class="songname">Ward</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            <!-- Wait - C418 -->
+            <li>
+            <div class="qsongcontainer flexdisplay">
+                <div class="qsong">
+                <div class="songart m14"></div>
+                <div class="qsdetails">
+                    <div class="songname">Wait</div>
+                    <div class="artistname">C418</div>
+                </div>
+                </div>
+                <div class="qsheart"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            </li>
+
+            
+            
+
+        </ol>
+    </div>
+  </div>
+    <!---------------------------------------------------------------------------------------------------------------
+        
+        Part two of Aside containing Trending and Premium plans in block view to be other half in smaller screens
+    
+    ------------------------------------------------------------------------------------------------------------------>
+    <div class="part2aside">
+    <!-------------------------
+        
+        Trending Song
+    
+      --------------------------->
+        <div class="trending  ">
+            <div><h2>Trending </h2></div>
+             <div class="tsong flexdisplay">
+                <div class="tsong-leftwing">
+                    <div class="tsongart" style="background-image: url(Assests/lr1.jpeg);"></div>
+                    <div class="tsong-info"> <!--Reusing ltsong details-->
+                        <div class="ltsongname">Arjan Vailey</div>
+                        <div class="ltdate">Harshwardhan</div> 
+                    </div>
+                </div>
+                <div class="tsign"><i class="rot45 fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+
+             <div class="tsong flexdisplay">
+                <div class="tsong-leftwing">
+                    <div class="tsongart" style="background-image: url(Assests/tswift.jpeg);">
+
+                    </div>
+                    <div class="tsong-info"> <!--Reusing ltsong details-->
+                        <div class="ltsongname">Lover</div>
+                        <div class="ltdate">Taylor Swift</div> 
+                    </div>
+                </div>
+                <div class="tsign"><i class="rot45 fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+
+             <div class="tsong flexdisplay">
+                <div class="tsong-leftwing">
+                    <div class="tsongart" style="background-image: url(Assests/le4.jpg);">
+
+                    </div>
+                    <div class="tsong-info"> <!--Reusing ltsong details-->
+                        <div class="ltsongname">Anti-Hero</div>
+                        <div class="ltdate">Taylor Swift</div> 
+                    </div>
+                </div>
+                <div class="tsign"><i class="rot45 fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+            
+            <div class="tsong  flexdisplay">
+                <div class="tsong-leftwing">
+                    <div class="tsongart" style="background-image: url(Assests/lh1.jpg);">
+
+                    </div>
+                    <div class="tsong-info"> <!--Reusing ltsong details-->
+                        <div class="ltsongname">Chaleya</div>
+                        <div class="ltdate">Arijit Singh</div> 
+                    </div>
+                </div>
+                <div class="tsign"><i class="rot45 fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+             
+            <div class="tsong  flexdisplay">
+                <div class="tsong-leftwing">
+                    <div class="tsongart" style="background-image: url(Assests/lh3.jpg);">
+
+                    </div>
+                    <div class="tsong-info"> <!--Reusing ltsong details-->
+                        <div class="ltsongname">Tere vaste</div>
+                        <div class="ltdate">Sachin-Jigar</div> 
+                    </div>
+                </div>
+                <div class="tsign"><i class="rot45 fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+            
+            <div class="tsong flexdisplay">
+                <div class="tsong-leftwing">
+                    <div class="tsongart" style="background-image: url(Assests/moye.jpeg);">
+
+                    </div>
+                    <div class="tsong-info"> <!--Reusing ltsong details-->
+                        <div class="ltsongname">Džanum</div>
+                        <div class="ltdate">Teya Dora</div> 
+                    </div>
+                </div>
+                <div class="tsign"><i class="rot45 fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+            
+        </div>
+
+    <!-------------------------
+        
+        Premium Plans
+    
+        --------------------------->
+
+        <div class="premium">
+            <div class="plan-card ">
+                <div class="tperiod">3 months for $19</div>
+                <div class="otpa"> <text>One-time plans here</text></div>
+                <div class="profile">Premium Plus+</div>
+                <div class="hr"></div>
+                <div class="offers">
+                    <ul >
+                        <li>Ad-free music</li>
+                        <li>Group Session</li>
+                        <li>Download 10k songs/device on 5 devices</li>
+                    </ul>
+                </div>
+                <div class="buynow">
+                    <button type="button">Buy Now</button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</aside>
+<!-------------------------
+        
+        Play Bar
+    
+--------------------------->
+<footer id="player" class="flexdisplay">
+    <!-------------------------------------
+        Left Side of Play Bar - Now Playng
+        ------------------------------------->
+    <div class="now-playing">
+        <div class="songart" style="background-image: url(Assests/moye.jpeg);"></div>
+        <div class="tsong-info"> <!--Reusing ltsong details-->
+            <div class="ltsongname">Džanum</div>
+            <div class="ltdate">Teya Dora</div> 
+        </div>
+    
+    
+    <div id="stopsign" >    
+        <div><i class="fa-regular fa-heart"></i></div>
+        <div><a href="#end"><i class="fa-regular fa-circle-stop"></i></a></div>
+    </div>
+    </div>
+   <!-------------------------------------
+        Middle Side of Play Bar - Seekbar
+        ------------------------------------->
+    
+    <div>
+    <!-----Upper Seek Bar - Icons------>
+        <div class="Seekbar-icons">
+            <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <i class="fa-solid fa-play"></i>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-repeat"></i>    
+        </div>
+         <!-----Lower Seek Bar ------>
+        <div class="Seekbar">
+            <span class="before-Seekbar">0:00</span>
+            <input type="range" min="0" max="100" value="50" class="custom-range">
+            <span class="after-Seekbar">4:12</span>
+        </div>
+    </div>
+
+   <!-------------------------------------
+        Right Side of Play Bar - Controls
+        ------------------------------------->
+    <div class="extra-control">
+      <span>  <i class="fa-regular fa-bookmark"></i>
+        <a href="#searchfield"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <i class="fa-solid fa-volume-high"></i> </span>
+       <span> <div class="volbar"><input type="range" min="0" max="100" value="50" class="custom-range"></div></span>
+       <span> <a href="#"><i class="fa-solid fa-house"></i></a></span>
+       <span>&nbsp;&nbsp;</span> <!--Using this to align away from scroll bar -->
+    </div>
+</footer>
+<div id="end"></div> <!--Used to for disabling player bar --> 
+</body>
+</html>
