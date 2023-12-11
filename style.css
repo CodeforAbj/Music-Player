@@ -3,8 +3,12 @@
     --Accentcolor2: rgb(18, 155, 18);
     --bgAccentcolor2: rgba(18, 155, 18, 0.24);
     --dropdowncolor: rgba(15, 15, 15, 0.685);
-    
+    scrollbar-width: none;/* Hide the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
 }
+*::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in Chrome/Safari */
+  }
 body{
     background-image: url('Assests/mainbg.jpg');
     background-size: cover;
@@ -12,13 +16,9 @@ body{
     color: var(--Accentcolor1);
     font-family:'Courier New', Courier, monospace;
     caret-color: transparent;
-     scrollbar-width: none;/* Hide the scrollbar in Firefox */
-    -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
-    
+
 }
-body::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar in Chrome/Safari */
-  }
+
 section{
     margin-bottom: 6%;
 }
@@ -74,15 +74,20 @@ a{
  ------------------------ */
 
  nav{
+    width: 100vw;
+    width:100dvw;
     position: sticky;
     top:0;
-    z-index: 9000;
+    z-index: 9000; /*Its over 9000*/
     background-image: url('Assests/mainbg.jpg');
     background-size: cover;
 
 }
 #navbar{
     border-bottom: 3px solid var(--Accentcolor1);
+    width: 100vw;
+    width:100dvw;
+ 
 }
     /* 
         Left side of navigation bar
@@ -130,6 +135,26 @@ a{
         border: 0;
         color: var(--Accentcolor1);
     }
+    @media screen and (max-width:768px){
+        #searchbar input{
+            width: 15vw;
+        }
+    }
+    @media screen and (max-width:425px){
+        #player_name{
+            display: none;
+        }
+        #searchbar input{
+            width: 10vw;
+        }
+        #page1,#page2,#page3{
+            font-size: 0.8rem;
+            margin-left:1vw;  
+        }
+        #notibell{
+            font-size: 1rem!important;
+        }
+    }
     #notibell{
         font-size: 1.8rem;
     }
@@ -149,7 +174,7 @@ a{
             margin-right: 1%;
             margin-top: 7%;
             padding :2%;
-            width:60%;
+            width:60dvw;
             /* border: 2px dotted red; */
             overflow-x: visible;
 
@@ -161,13 +186,14 @@ a{
             margin-right: 2vw;
             margin-top: 7%;
             padding:1%;
-            width:21%;
+            width:30dvw;
+            overflow-x: visible;
             /* border: 2px dotted blue; */
    }
-   @media screen and (max-width:920px) {
+   @media screen and (max-width:768px) {
     main{
         display:block;
-        width: 80%;
+        width: 100%;
         margin-left: 10%;
     }
     aside{
@@ -193,9 +219,12 @@ a{
         
     -----------------------------------*/
 
-   @media screen and (max-width:375px) {
+   @media screen and (max-width:425px) {
+    main{
+        margin-left: auto;
+    }
     aside{
-        
+        width: 100%;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -231,7 +260,7 @@ a{
         background-size: cover;
     }
     .moodname{
-        font-size: small;
+        font-size: 0.75rem;
     }
    }
   
@@ -418,11 +447,20 @@ a{
         Popular Artist Section
         
     --------------------------- */
+.pacontainer{
+    align-items: flex-start;
+}
+.popartist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .p-artistname{
     text-align: center;
+    width: min-content;
 
 }
-@media screen and (max-width:620px){
+@media screen and (max-width:768px){
 .p-artistname{
     font-size: xx-small;
 
@@ -518,13 +556,21 @@ a{
     
 }
 
-@media screen and (max-width:720px){
+@media screen and (max-width:425px){
+    .stations-icon{
+        margin: 2px;
+        margin-left: 0px;
+        position: relative;
+        left: -12px;
+    }
+}
+@media screen and (max-width:768px){
     .gr div{
         visibility: hidden;
         font-size: 0.2rem;  
     }
 }
-@media screen and (max-width:1010px){
+@media screen and (max-width:1024px){
     .gr div{
         font-size: 0.6rem;  
     }
