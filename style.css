@@ -6,6 +6,13 @@
     scrollbar-width: none;/* Hide the scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
 }
+
+/* -----------------------------------
+
+        Universal Properties 
+
+--------------------------------------  */
+
 *::-webkit-scrollbar {
     display: none; /* Hide the scrollbar in Chrome/Safari */
   }
@@ -16,7 +23,7 @@ body{
     color: var(--Accentcolor1);
     font-family:'Courier New', Courier, monospace;
     caret-color: transparent;
-
+    animation: 1s ease-out 0s 1 slideIn;
 }
 
 section{
@@ -67,6 +74,21 @@ a{
     transform: rotate(-15deg);
 }
 
+/* ----------------------
+    
+    whole page Animation
+    
+ ------------------------ */
+
+
+ @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 /* ----------------------
     
     Navigation bar
@@ -194,7 +216,7 @@ a{
     main{
         display:block;
         width: 100%;
-        margin-left: 10%;
+     
     }
     aside{
         display:flex;
@@ -328,7 +350,7 @@ a{
    
  /* ---------------------------- 
           
-       Making of dropdown here 
+       Making of dropdown Menu here 
  
     ----------------------------*/
 
@@ -691,18 +713,7 @@ width: 100%;
     scrollbar-width: none;/* Hide the scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
   }
-  @media screen and (max-width: 1024px) and (min-height: 1024px){
-    #qcontainer{
-        max-height: 80dvh;
-    }
-    .trending{
-        height:30dvh;
-    }
-    .qcontainer::-webkit-scrollbar {
-        display: none; /* Hide the scrollbar in Chrome/Safari */
-      }
-    
-  }
+  
   .qcontainer::-webkit-scrollbar {
     display: none; /* Hide the scrollbar in Chrome/Safari */
   }
@@ -883,6 +894,7 @@ width: 100%;
         overflow-x: hidden; 
         /* border: 1px dotted yellow; */
         height:max-content;
+        width: fit-content;
         background-color: var(--Accentcolor1);
         
        }
@@ -993,7 +1005,7 @@ input[type="range"].custom-range {
 
 /* Color on the left of thumb */
 input[type="range"].custom-range::-webkit-slider-runnable-track {
-  background: linear-gradient(to right, #129B12 0%, #129B12 50%, #555 50%, #555 100%);
+  background-color: #129B12;
   border-radius: 5px;
 }
 
@@ -1045,3 +1057,8 @@ input[type="range"].custom-range::-ms-thumb {
     width: 5vw;
     margin-right: 1vw;
 }
+/* -----------------------------------
+
+        Finished It
+
+--------------------------------------  */

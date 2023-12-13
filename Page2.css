@@ -3,8 +3,21 @@
     --Accentcolor2: rgb(18, 155, 18);
     --bgAccentcolor2: rgba(18, 155, 18, 0.24);
     --dropdowncolor: rgba(15, 15, 15, 0.685);
-    
+    scrollbar-width: none;/* Hide the scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
+
+
 }
+
+/* -----------------------------------
+
+        Universal Properties 
+
+--------------------------------------  */
+
+*::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in Chrome/Safari */
+  }
 body{
     background-image: url('Assests/mainbg.jpg');
     background-size: cover;
@@ -14,7 +27,7 @@ body{
     caret-color: transparent;
      scrollbar-width: none;/* Hide the scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide the scrollbar in IE/Edge */
-    
+    animation: 1s ease-out 0s 1 slideIn;
 }
 body::-webkit-scrollbar {
     display: none; /* Hide the scrollbar in Chrome/Safari */
@@ -33,6 +46,7 @@ a{
         Reusable classes 
 
 --------------------------------------  */
+
 
 .ring{
     margin: 1vw;
@@ -56,24 +70,41 @@ a{
 .smallf{
     font-size: 0.9rem;
 }
+/* ----------------------
+    
+    whole page Animation
+    
+ ------------------------ */
 
 
+@keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 /* ----------------------
     
     Navigation bar
     
  ------------------------ */
-
  nav{
+    width: 100vw;
+    width:100dvw;
     position: sticky;
     top:0;
-    z-index: 9000;
+    z-index: 9000; /*Its over 9000*/
     background-image: url('Assests/mainbg.jpg');
     background-size: cover;
 
 }
 #navbar{
     border-bottom: 3px solid var(--Accentcolor1);
+    width: 100vw;
+    width:100dvw;
+ 
 }
     /* 
         Left side of navigation bar
@@ -121,6 +152,26 @@ a{
         border: 0;
         color: var(--Accentcolor1);
     }
+    @media screen and (max-width:768px){
+        #searchbar input{
+            width: 15vw;
+        }
+    }
+    @media screen and (max-width:425px){
+        #player_name{
+            display: none;
+        }
+        #searchbar input{
+            width: 10vw;
+        }
+        #page1,#page2,#page3{
+            font-size: 0.8rem;
+            margin-left:1vw;  
+        }
+        #notibell{
+            font-size: 1rem!important;
+        }
+    }
     #notibell{
         font-size: 1.8rem;
     }
@@ -140,7 +191,7 @@ a{
             margin-right: 1%;
             margin-top: 7%;
             padding :2%;
-            width:60%;
+            width:60dvw;
             /* border: 2px dotted red; */
             overflow-x: visible;
 
@@ -152,14 +203,15 @@ a{
             margin-right: 2vw;
             margin-top: 7%;
             padding:1%;
-            width:21%;
+            width:30dvw;
+            overflow-x: visible;
             /* border: 2px dotted blue; */
    }
-   @media screen and (max-width:920px) {
+   @media screen and (max-width:768px) {
     main{
         display:block;
-        width: 80%;
-        margin-left: 10%;
+        width: 100%;
+     
     }
     aside{
         display:flex;
@@ -167,7 +219,10 @@ a{
         margin-left: 5%;
         margin-right: 5%;
     }
-  
+    .part1aside{
+        display: inline-block;
+        max-width: 50%;
+    }   
     .part2aside{
         position: relative;
         left: 20%;
@@ -175,9 +230,52 @@ a{
         max-width: 40%;
     } 
    }
+
+   /* -------------------------------
+    
+        Mobile View Corrections 
+        
+    -----------------------------------*/
+
+    @media screen and (max-width:425px) {
+        main{
+            margin-left: auto;
+        }
+        aside{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            
+        } 
+        .part1aside{
+            position: relative;
+            left: 10%;
+            display: inline-block;
+            max-width: 80%;
+        }   
+        .part2aside{
+            position: relative;
+            left: 10%;
+            display: inline-block;
+            max-width: 80%;
+        } 
+        .shcontainer {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .shsong{
+            width: 90% !important; /* It was breaking in mobile view thats why */
+        }
+        .ltsongname{
+            font-size: x-small;
+        }
+        
+       }
+      
  /* ---------------------------- 
           
-       Artist Card 
+       Artist Card Formattig 
  
     ----------------------------*/ 
 .Artist-Bio-container{
@@ -425,9 +523,7 @@ background-position: center;
     color:grey;
 }
 
-
-
-   .songart{
+.songart{
     content: ''; 
     display: inline-block;
     width: 50px; /* Set the width */
@@ -478,6 +574,7 @@ background-position: center;
         overflow-x: hidden; 
         /* border: 1px dotted yellow; */
         height:max-content;
+        width: fit-content;
         background-color: var(--Accentcolor1);
         
        }
@@ -588,8 +685,8 @@ input[type="range"].custom-range {
 
 /* Color on the left of thumb */
 input[type="range"].custom-range::-webkit-slider-runnable-track {
-  background: linear-gradient(to right, #129B12 0%, #129B12 50%, #555 50%, #555 100%);
-  border-radius: 5px;
+    background-color: #129B12;
+    border-radius: 5px;
 }
 
 /* Color on the right of thumb */
